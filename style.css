@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #007bff;
+  --secondary: #4b9cdb;
+  --accent: #e8eef5;
+  --text-dark: #2c2c2c;
+  --text-light: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-dark);
+  background: var(--accent);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -2;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+.hero-content {
+  text-align: center;
+  color: var(--text-light);
+}
+.profile-pic {
+  width: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--secondary);
+  margin-bottom: 1rem;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+}
+.hero h3 {
+  font-weight: 400;
+  margin: 0.8rem 0;
+}
+.btn {
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: var(--secondary);
+}
+
+/* ===== Sections ===== */
+.section {
+  padding: 80px 20px;
+  text-align: center;
+}
+.section h2 {
+  margin-bottom: 1rem;
+  color: var(--primary);
+}
+
+/* ===== About Section ===== */
+.about {
+  background: linear-gradient(180deg, #ffffff, #f6f9ff);
+}
+
+/* ===== Skills Section ===== */
+.skills {
+  background: linear-gradient(180deg, #f6f9ff, #e8eef5);
+}
+.skill-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+.skill-grid div {
+  background: #fff;
+  padding: 15px 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-weight: 600;
+  transition: transform 0.3s;
+}
+.skill-grid div:hover {
+  transform: scale(1.05);
+}
+
+/* ===== Projects Section ===== */
+.projects {
+  background: linear-gradient(180deg, #e8eef5, #dbe9f8);
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* ===== Contact Section ===== */
+.contact {
+  background: linear-gradient(180deg, #dbe9f8, #ffffff);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+input, textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+}
+button:hover {
+  background: var(--secondary);
+}
+
+/* ===== Footer ===== */
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive ===== */
+@media(max-width:768px){
+  .hero h1 { font-size: 1.8rem; }
+  .hero h3 { font-size: 1rem; }
+}
