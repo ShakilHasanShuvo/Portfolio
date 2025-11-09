@@ -1,5 +1,5 @@
-// Typing Animation
-const textArray = ["💻 Front-End Developer", "⚖️ Law Student", "🌍 Tech Enthusiast"];
+// Typing animation
+const textArray = ["💻 Creative Front-End Developer", "🎨 UI/UX Enthusiast", "⚖️ Law Student", "🌍 Dream Builder"];
 let textIndex = 0, charIndex = 0;
 const typingSpeed = 100, eraseSpeed = 60, delay = 1500;
 const typedText = document.querySelector(".typed-text");
@@ -26,8 +26,7 @@ function erase() {
 
 document.addEventListener("DOMContentLoaded", () => setTimeout(type, 1000));
 
-// Contact Form Toast (for demo)
-document.querySelector("#contact-form").addEventListener("submit", e => {
+document.querySelector("#contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("✅ Message Sent Successfully!");
+  alert("✅ Message sent successfully!");
 });
